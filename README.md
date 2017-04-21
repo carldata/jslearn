@@ -2,7 +2,7 @@
 
 ```sh
 bower update
-pulp browserify ---standalone TS -to html/timeseries.js
+pulp browserify ---standalone TS --to html/timeseries.js
 ```
 
 This will generate timeseries.js library in html folder.
