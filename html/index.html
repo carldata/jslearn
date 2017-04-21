@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Time Series FFI integration</title>
+</head>
+<body>
+  <h1>Integrate purescript libraries with js</h1>
+
+  <script>
+    function test() {
+      // Sample usage
+      var xs = [1,2,3,2,1,2,3,4];
+      var model = TS.train(xs)
+      var ys = [1,999,2,4];
+      var predicted = TS.predict(model)(ys);
+      console.log(predicted);
+    }
+  </script>
+
+  <script type="text/javascript" src="timeseries.js"></script>
+</body>
+</html>
