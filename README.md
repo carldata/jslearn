@@ -1,4 +1,4 @@
-# Convert PureScript librariers into javascript bundle
+# Convert PureScript libraries into the JavaScript bundle
 
 ```sh
 bower update
