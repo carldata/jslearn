@@ -6,7 +6,7 @@
     "type": "git"
   },
   "scripts": {
-    "generate": "pulp browserify --standalone TS --to html/timeseries.js"
+    "generate": "pulp browserify --standalone TS --to lib/js-learn.js"
   },
   "dependencies": {
   },
