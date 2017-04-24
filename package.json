@@ -1,0 +1,19 @@
+{
+  "name": "js-learn",
+  "version": "0.0.1",
+  "description": "For orchestrating Typescript definitions that allow writing Jasime tests of PureScript-based JSLearn packaged.",
+  "repository": {
+    "type": "git"
+  },
+  "scripts": {
+    "generate": "pulp browserify --standalone TS --to html/timeseries.js"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/jasmine": "^2.5.47",
+    "jasmine": "^2.5.3",
+    "pulp": "^11.0.0",
+    "typescript": "^2.2.2"
+  }
+}
