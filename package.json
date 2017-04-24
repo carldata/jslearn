@@ -8,11 +8,12 @@
   "scripts": {
     "generate": "pulp browserify --standalone TS --to lib/js-learn.js"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/jasmine": "^2.5.47",
+    "@types/lodash": "^4.14.63",
     "jasmine": "^2.5.3",
+    "lodash": "^4.17.4",
     "pulp": "^11.0.0",
     "typescript": "^2.2.2"
   }
