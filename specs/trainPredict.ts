@@ -1,6 +1,6 @@
 describe("Train/predict works", () => {
-  it("Preliminary test and example", () => {
-    let model = TS.train([1,2,3,2,1,2,3,4]);
+  it("Preliminary test and example", () => {    
+    let model = TS.train([1,2,3,2,1,2,3,4]);    
     let testVector = [1,999,2,4];
     let predicted = TS.predict(model)(testVector);
     expect(predicted[0]).not.toBe(0);
@@ -11,7 +11,7 @@ describe("Train/predict works", () => {
 
   it("Array with random-generated mutations", () => {
     const samplesLength = 100;
-    const probabilitiyOfMutation = 10;
+    const probabilityOfMutation = 10;
     type Sample = { 
       trainedValue: number;
       testedValue: number;
@@ -19,7 +19,7 @@ describe("Train/predict works", () => {
       mutated: boolean;
     }
     let valueChangeRange = { minLow: -3, maxHigh: 3 };
-    let mutate = ():boolean => _.random(0, 100) <= probabilitiyOfMutation;
+    let mutate = ():boolean => _.random(0, 100) <= probabilityOfMutation;
     let changeCurrentValue = ():boolean => _.random(1, 100) < 10;
     let samples: Sample[] = [];
     let currentValue = 5000;

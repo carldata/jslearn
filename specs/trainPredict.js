@@ -10,12 +10,12 @@ describe("Train/predict works", function () {
     });
     it("Array with random-generated mutations", function () {
         var samplesLength = 100;
-        var probabilitiyOfMutation = 10;
+        var probabilityOfMutation = 10;
         var valueChangeRange = { minLow: -3, maxHigh: 3 };
-        var mutate = function () { return _.random(0, 100) <= probabilitiyOfMutation; };
+        var mutate = function () { return _.random(0, 100) <= probabilityOfMutation; };
         var changeCurrentValue = function () { return _.random(1, 100) < 10; };
         var samples = [];
-        var currentValue = 5000; //_.random(1, 50000);
+        var currentValue = 5000;
         for (var i = 0; i < samplesLength; i++) {
             samples.push({
                 trainedValue: currentValue + _.random(valueChangeRange.minLow, valueChangeRange.maxHigh)
@@ -27,11 +27,9 @@ describe("Train/predict works", function () {
         });
         var model = TS.train(_.map(samples, function (el) { return el.trainedValue; }));
         var predictionVector = TS.predict(model)(_.map(samples, function (el) { return el.testedValue; }));
-        console.log(predictionVector);
         for (var i = 0; i < predictionVector.length; i++) {
             samples[i].predictionValue = predictionVector[i];
         }
-        console.log('mutations', _.filter(samples, function (el) { return el.mutated; }));
         _.each(samples, function (el) {
             if (el.mutated)
                 expect(el.predictionValue).toBe(0);
