@@ -6,7 +6,7 @@
     "type": "git"
   },
   "scripts": {
-    "generate": "pulp browserify --standalone TS --to lib/js-learn.js"
+    "generate": "pulp browserify --standalone TS --to lib/index.js"
   },
   "dependencies": {},
   "devDependencies": {
